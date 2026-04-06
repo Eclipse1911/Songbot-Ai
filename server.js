@@ -8,9 +8,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public')); // Serve the UI folder
 
+const binary = process.env.VERCEL ? './backend' : 'backend.exe';
+
 function runCppBot(args) {
     try {
-        const cmd = `backend.exe ${args.map(a => `"${a}"`).join(' ')}`;
+        const cmd = `${binary} ${args.map(a => `"${a}"`).join(' ')}`;
         const output = execSync(cmd, { encoding: 'utf-8' });
         return JSON.parse(output.trim());
     } catch (e) {
@@ -50,8 +52,12 @@ app.get('/api/top', (req, res) => {
     res.json(runCppBot(['top_rated']));
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-    console.log(`Frontend accessible via: http://localhost:${PORT}/`);
-});
+const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server running at http://localhost:${PORT}`);
+        console.log(`Frontend accessible via: http://localhost:${PORT}/`);
+    });
+}
+
+module.exports = app;
