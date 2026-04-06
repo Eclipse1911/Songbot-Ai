@@ -1,0 +1,10 @@
+1 Blinding Lights|The Weeknd|Pop|4.9
+2 Shape of You|Ed Sheeran|Pop|4.8
+3 Bohemian Rhapsody|Queen|Rock|5.0
+4 Sunflower|Post Malone|Hip-Hop|4.7
+5 Someone Like You|Adele|Pop|4.8
+6 Smells Like Teen Spirit|Nirvana|Rock|4.9
+7 Lose Yourself|Eminem|Hip-Hop|4.9
+8 Hotel California|Eagles|Rock|4.9
+9 Sicko Mode|Travis Scott|Hip-Hop|4.6
+10 Perfect|Ed Sheeran|Pop|4.7
