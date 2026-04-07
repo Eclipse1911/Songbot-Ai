@@ -8,3 +8,20 @@
 8 Hotel California|Eagles|Rock|4.9
 9 Sicko Mode|Travis Scott|Hip-Hop|4.6
 10 Perfect|Ed Sheeran|Pop|4.7
+11 Take Five|Dave Brubeck|Jazz|4.8
+12 Fly Me To The Moon|Frank Sinatra|Jazz|4.9
+13 So What|Miles Davis|Jazz|5.0
+14 Strobe|deadmau5|Electronic|4.8
+15 Clarity|Zedd|Electronic|4.7
+16 Get Lucky|Daft Punk|Electronic|4.9
+17 HUMBLE.|Kendrick Lamar|Hip-Hop|4.8
+18 Stairway to Heaven|Led Zeppelin|Rock|5.0
+19 Billie Jean|Michael Jackson|Pop|5.0
+20 God's Plan|Drake|Hip-Hop|4.6
+21 Midnight City|M83|Electronic|4.8
+22 Feeling Good|Nina Simone|Jazz|4.9
+23 Believer|Imagine Dragons|Rock|4.5
+24 As It Was|Harry Styles|Pop|4.7
+25 Numb|Linkin Park|Rock|4.8
+26 hotel california|eagles|Rock|4
+27 hotel california|eagles|Rock|4.7
