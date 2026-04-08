@@ -1,0 +1,9 @@
+-xc++
+-std=c++17
+--target=i586-pc-windows-gnu
+-I C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++
+-I C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32
+-I C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward
+-I C:/MinGW/lib/gcc/mingw32/6.3.0/include
+-I C:/MinGW/include
+-I C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed

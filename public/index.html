@@ -15,19 +15,28 @@
         </div>
         <nav class="nav-links">
             <div class="nav-link active" data-tab="discover" onclick="switchTab('discover')">
-                <i class="fas fa-home"></i> Discover
+                <i class="fas fa-home"></i> Trending Discover
+            </div>
+            <div class="nav-link" data-tab="local" onclick="switchTab('local')">
+                <i class="fas fa-database"></i> Local Library
             </div>
             <div class="nav-link" data-tab="search" onclick="switchTab('search')">
-                <i class="fas fa-search"></i> Search
+                <i class="fas fa-search"></i> Global Search
             </div>
             <div class="nav-link" data-tab="recommend" onclick="switchTab('recommend')">
-                <i class="fas fa-magic"></i> Recommendations
+                <i class="fas fa-magic"></i> Explore Genres
             </div>
             <div class="nav-link" data-tab="top" onclick="switchTab('top')">
-                <i class="fas fa-star"></i> Top Rated
+                <i class="fas fa-star"></i> iTunes Top 50
+            </div>
+            <div class="nav-link" data-tab="local_top" onclick="switchTab('local_top')">
+                <i class="fas fa-chart-line"></i> Local Top Rated
+            </div>
+            <div class="nav-link" data-tab="local_rec" onclick="switchTab('local_rec')">
+                <i class="fas fa-robot"></i> C++ AI Suggest
             </div>
             <div class="nav-link" data-tab="add" onclick="switchTab('add')">
-                <i class="fas fa-plus"></i> Add Song
+                <i class="fas fa-plus"></i> Add Track (C++)
             </div>
         </nav>
     </aside>
@@ -36,34 +45,46 @@
         <!-- Discover Tab -->
         <div id="discover" class="tab-content">
             <div class="header">
-                <h1>Discover Music</h1>
-                <p>Browse the entire music library loaded securely via the C++ backend.</p>
+                <h1>Trending Discover</h1>
+                <p>Browse the top trending tracks globally powered by Apple iTunes.</p>
             </div>
             <div class="grid" id="discover-grid"></div>
         </div>
 
-        <!-- Search Tab -->
-        <div id="search" class="tab-content hidden">
+        <!-- Local Library Tab -->
+        <div id="local" class="tab-content hidden">
             <div class="header">
-                <h1>Search Library</h1>
-                <p>Search using O(log n) AVL ID search or O(n) Substring mapping.</p>
+                <h1>Local Library (C++)</h1>
+                <p>Browse your personal library sourced from the local AVL Tree database.</p>
             </div>
             <div class="controls">
-                <select id="search-type" style="flex: 0.3">
+                <select id="local-search-type" style="flex: 0.3">
                     <option value="name">Search by Title/Keyword</option>
                     <option value="id">Search by Song ID</option>
                 </select>
-                <input type="text" id="search-input" placeholder="Type a song title or an ID...">
-                <button onclick="performSearch()">Search</button>
+                <input type="text" id="local-search-input" placeholder="Type a song title or an ID...">
+                <button onclick="performLocalSearch()"><i class="fas fa-search"></i> Search Local</button>
             </div>
-            <div class="grid" id="search-results"></div>
+            <div class="grid" id="local-grid"></div>
+        </div>
+        <!-- Search Tab (formerly Global Search) -->
+        <div id="search" class="tab-content hidden">
+            <div class="header">
+                <h1>Search Music</h1>
+                <p>Access millions of tracks, albums and artists via iTunes Search API.</p>
+            </div>
+            <div class="controls">
+                <input type="text" id="global-search-input" placeholder="Search for any artist, song, or album...">
+                <button onclick="performGlobalSearch()"><i class="fas fa-search"></i> Search Online</button>
+            </div>
+            <div class="grid" id="global-results"></div>
         </div>
 
         <!-- Recommend Tab -->
         <div id="recommend" class="tab-content hidden">
             <div class="header">
-                <h1>AI Recommendations</h1>
-                <p>Music suggestions using polymorphism and C++ inheritance classes.</p>
+                <h1>Explore Genres</h1>
+                <p>Music suggestions tailored to your mood via iTunes curation.</p>
             </div>
             <div class="controls" style="max-width: 600px;">
                 <select id="rec-genre" style="flex: 1">
@@ -82,17 +103,46 @@
         <!-- Top Rated Tab -->
         <div id="top" class="tab-content hidden">
             <div class="header">
-                <h1>Top Rated Songs</h1>
-                <p>Ranked actively utilizing standard C++ sorting algorithms O(n log n).</p>
+                <h1>iTunes Top 50</h1>
+                <p>The hottest tracks charting globally right now.</p>
             </div>
             <div class="grid" id="top-grid"></div>
+        </div>
+
+        <!-- Local Top Rated Tab -->
+        <div id="local_top" class="tab-content hidden">
+            <div class="header">
+                <h1>Local Top Rated</h1>
+                <p>Sorted by C++ STL routines against local database.</p>
+            </div>
+            <div class="grid" id="local-top-grid"></div>
+        </div>
+
+        <!-- C++ AI Recommend Tab -->
+        <div id="local_rec" class="tab-content hidden">
+            <div class="header">
+                <h1>C++ Recommendations</h1>
+                <p>AI suggestions computed locally via OOP polymorphism.</p>
+            </div>
+            <div class="controls" style="max-width: 600px;">
+                <select id="local-rec-genre" style="flex: 1">
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Hip-Hop">Hip-Hop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Electronic">Electronic</option>
+                </select>
+                <button onclick="performLocalRecommendation()"><i class="fas fa-bolt"></i> Generate</button>
+            </div>
+            <h3 style="margin: 2rem 0 1rem; color: var(--text-main); font-weight: 600;">Results</h3>
+            <div class="grid" id="local-rec-results"></div>
         </div>
 
         <!-- Add Song Tab -->
         <div id="add" class="tab-content hidden">
             <div class="header">
                 <h1>Add New Track</h1>
-                <p>Persists physically to songs.txt via C++ filestreams.</p>
+                <p>Persists physically to `songs.txt` via C++ filestreams.</p>
             </div>
             <form id="add-form" onsubmit="addSong(event)" class="add-form-container">
                 <div class="form-group">
@@ -117,10 +167,26 @@
                     <label>Rating (0.0 to 5.0)</label>
                     <input type="number" id="add-rating" placeholder="5.0" step="0.1" min="0" max="5" required>
                 </div>
-                <button type="submit" style="width: 100%; margin-top: 1rem;"><i class="fas fa-save"></i> Save to AVL Tree & Database</button>
+                <button type="submit" style="width: 100%; margin-top: 1rem;"><i class="fas fa-save"></i> Save to AVL Tree</button>
             </form>
         </div>
     </main>
+
+    <!-- Global Music Player Overlay -->
+    <div id="player-container" class="player-overlay hidden">
+        <div class="player-content">
+            <div class="player-info">
+                <img id="player-img" src="https://via.placeholder.com/50" alt="Album Art">
+                <div>
+                    <div id="player-title" class="player-song-title">Song Title</div>
+                    <div id="player-artist" class="player-song-artist">Artist</div>
+                </div>
+            </div>
+            <audio id="audio-player" controls style="flex:1"></audio>
+            <button class="btn-close-player" onclick="closePlayer()"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>

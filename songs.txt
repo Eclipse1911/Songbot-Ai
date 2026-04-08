@@ -1,27 +1,34 @@
-1 Blinding Lights|The Weeknd|Pop|4.9
-2 Shape of You|Ed Sheeran|Pop|4.8
-3 Bohemian Rhapsody|Queen|Rock|5.0
-4 Sunflower|Post Malone|Hip-Hop|4.7
-5 Someone Like You|Adele|Pop|4.8
-6 Smells Like Teen Spirit|Nirvana|Rock|4.9
-7 Lose Yourself|Eminem|Hip-Hop|4.9
-8 Hotel California|Eagles|Rock|4.9
-9 Sicko Mode|Travis Scott|Hip-Hop|4.6
-10 Perfect|Ed Sheeran|Pop|4.7
-11 Take Five|Dave Brubeck|Jazz|4.8
-12 Fly Me To The Moon|Frank Sinatra|Jazz|4.9
-13 So What|Miles Davis|Jazz|5.0
-14 Strobe|deadmau5|Electronic|4.8
-15 Clarity|Zedd|Electronic|4.7
-16 Get Lucky|Daft Punk|Electronic|4.9
-17 HUMBLE.|Kendrick Lamar|Hip-Hop|4.8
-18 Stairway to Heaven|Led Zeppelin|Rock|5.0
-19 Billie Jean|Michael Jackson|Pop|5.0
-20 God's Plan|Drake|Hip-Hop|4.6
-21 Midnight City|M83|Electronic|4.8
-22 Feeling Good|Nina Simone|Jazz|4.9
-23 Believer|Imagine Dragons|Rock|4.5
-24 As It Was|Harry Styles|Pop|4.7
+1 Starboy|The Weeknd|Pop|4.5
+2 Shape of You|Ed Sheeran|Pop|4.2
+3 Bohemian Rhapsody|Queen|Rock|4.9
+4 Lose Yourself|Eminem|Hip-Hop|4.8
+5 Take Five|Dave Brubeck|Jazz|4.7
+6 Get Lucky|Daft Punk|Electronic|4.4
+7 Billie Jean|Michael Jackson|Pop|4.9
+8 Smells Like Teen Spirit|Nirvana|Rock|4.6
+9 HUMBLE.|Kendrick Lamar|Hip-Hop|4.3
+10 So What|Miles Davis|Jazz|4.8
+11 Strobe|deadmau5|Electronic|4.6
+12 Thriller|Michael Jackson|Pop|4.8
+13 Hotel California|Eagles|Rock|4.7
+14 N.Y. State of Mind|Nas|Hip-Hop|4.9
+15 Giant Steps|John Coltrane|Jazz|4.8
+16 Levels|Avicii|Electronic|4.5
+17 Uptown Funk|Mark Ronson|Pop|4.4
+18 Stairway to Heaven|Led Zeppelin|Rock|4.9
+19 Juicy|The Notorious B.I.G.|Hip-Hop|4.8
+20 My Favorite Things|John Coltrane|Jazz|4.7
+21 Clarity|Zedd|Electronic|4.3
+22 Blinding Lights|The Weekend|Pop|4.9
+23 In the End|Linkin Park|Rock|4.8
+24 Numb|Linkin Park|Rock|4.8
 25 Numb|Linkin Park|Rock|4.8
 26 hotel california|eagles|Rock|4
 27 hotel california|eagles|Rock|4.7
+28 TestSong|TestArtist|Pop|4.5
+29 Blue Eyes|Yo Yo Honey Singh|Pop|5
+30 Blinding Lights|The Weeknd|Pop|5
+31 Maria Maria (feat. The Product G&B) [Radio Mix]|Santana|Rock|5
+32 Sorry|Justin Bieber|Pop|5
+33 Rinkiya Ke Papa|Samuel Singh|Pop|5
+34 Zingaat|Ajay-Atul|Pop|5
